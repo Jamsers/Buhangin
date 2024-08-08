@@ -1,0 +1,171 @@
+[gd_scene load_steps=35 format=3 uid="uid://cmsxjgvinf7jx"]
+
+[ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_4w7xk"]
+[ext_resource type="Resource" uid="uid://oqnojdtn008i" path="res://Resources/Lighting/Core/TIME_AM_0.tres" id="2_dmmva"]
+[ext_resource type="Resource" uid="uid://buivpb86yw5p0" path="res://Resources/Lighting/Core/TIME_AM_5_20.tres" id="3_gc3k3"]
+[ext_resource type="Resource" uid="uid://b1u0xjy8gj3rw" path="res://Resources/Lighting/InterimCorrections/TIME_AM_5_22.tres" id="4_kwcjo"]
+[ext_resource type="Resource" uid="uid://c8nmwfaxnfbnb" path="res://Resources/Lighting/InterimCorrections/TIME_AM_5_27.tres" id="5_febgx"]
+[ext_resource type="Resource" uid="uid://c7kl22jqdcch7" path="res://Resources/Lighting/Core/TIME_AM_5_40.tres" id="6_xta1e"]
+[ext_resource type="Resource" uid="uid://bu4k1pg0qwo8p" path="res://Resources/Lighting/Core/TIME_AM_6.tres" id="7_v110k"]
+[ext_resource type="Resource" uid="uid://bve7hd1e5ug01" path="res://Resources/Lighting/InterimCorrections/TIME_AM_6_7.tres" id="8_6vfgb"]
+[ext_resource type="Resource" uid="uid://4hmf6lrbu60o" path="res://Resources/Lighting/InterimCorrections/TIME_AM_6_15.tres" id="9_kpmyw"]
+[ext_resource type="Resource" uid="uid://d0dbaf8m6fcpr" path="res://Resources/Lighting/InterimCorrections/TIME_AM_6_30.tres" id="10_fh70k"]
+[ext_resource type="Resource" uid="uid://cvjfqmqm5imlk" path="res://Resources/Lighting/InterimCorrections/TIME_AM_7.tres" id="11_u4mso"]
+[ext_resource type="Resource" uid="uid://o4dfgkexhdw5" path="res://Resources/Lighting/Core/TIME_AM_9.tres" id="12_ny5ea"]
+[ext_resource type="Resource" uid="uid://dmjapq17u51xm" path="res://Resources/Lighting/Core/TIME_PM_0.tres" id="13_xy352"]
+[ext_resource type="Resource" uid="uid://fdswb8pn8erx" path="res://Resources/Lighting/Core/TIME_PM_3.tres" id="14_yifs8"]
+[ext_resource type="Resource" uid="uid://cou3iw1liph4g" path="res://Resources/Lighting/InterimCorrections/TIME_PM_4_30.tres" id="15_7rxca"]
+[ext_resource type="Resource" uid="uid://ccqsjbqatofuf" path="res://Resources/Lighting/InterimCorrections/TIME_PM_5_15.tres" id="16_rnrpi"]
+[ext_resource type="Resource" uid="uid://cy5nrm66j1g7o" path="res://Resources/Lighting/InterimCorrections/TIME_PM_5_45.tres" id="17_0bkwn"]
+[ext_resource type="Resource" uid="uid://v7ef2bbfyi5s" path="res://Resources/Lighting/InterimCorrections/TIME_PM_5_53.tres" id="18_wse5x"]
+[ext_resource type="Resource" uid="uid://dao7mgcw8uxe1" path="res://Resources/Lighting/Core/TIME_PM_6.tres" id="19_b7xd2"]
+[ext_resource type="Resource" uid="uid://bekndudr2hjh2" path="res://Resources/Lighting/Core/TIME_PM_6_20.tres" id="20_txevg"]
+[ext_resource type="Resource" uid="uid://c1733xu6yotvp" path="res://Resources/Lighting/InterimCorrections/TIME_PM_6_33.tres" id="21_dunwp"]
+[ext_resource type="Resource" uid="uid://cym57oestwev2" path="res://Resources/Lighting/InterimCorrections/TIME_PM_6_38.tres" id="22_w4wh0"]
+[ext_resource type="Resource" uid="uid://dudf03rsqucg0" path="res://Resources/Lighting/Core/TIME_PM_6_40.tres" id="23_dtqdv"]
+[ext_resource type="Script" path="res://Scripts/TimeOfDaySystem.gd" id="24_crcnr"]
+[ext_resource type="Material" uid="uid://cc4jououolyae" path="res://Materials/Ground.tres" id="25_ob051"]
+[ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="26_111je"]
+[ext_resource type="Material" uid="uid://dv3nmr37d666h" path="res://Materials/FogMaterial.tres" id="27_1ipqp"]
+[ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="28_f8a2h"]
+[ext_resource type="CameraAttributesPractical" uid="uid://det73xlqhmppv" path="res://Resources/CameraAttributes.tres" id="29_j6yrg"]
+[ext_resource type="Material" uid="uid://7qu3fnkocp0" path="res://Materials/Concrete.tres" id="30_2mevd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wedtd"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_csmvq"]
+data = PackedVector3Array(-25, 0.5, 25, 25, 0.5, 25, -25, -0.5, 25, 25, 0.5, 25, 25, -0.5, 25, -25, -0.5, 25, 25, 0.5, -25, -25, 0.5, -25, 25, -0.5, -25, -25, 0.5, -25, -25, -0.5, -25, 25, -0.5, -25, 25, 0.5, 25, 25, 0.5, -25, 25, -0.5, 25, 25, 0.5, -25, 25, -0.5, -25, 25, -0.5, 25, -25, 0.5, -25, -25, 0.5, 25, -25, -0.5, -25, -25, 0.5, 25, -25, -0.5, 25, -25, -0.5, -25, 25, 0.5, 25, -25, 0.5, 25, 25, 0.5, -25, -25, 0.5, 25, -25, 0.5, -25, 25, 0.5, -25, -25, -0.5, 25, 25, -0.5, 25, -25, -0.5, -25, 25, -0.5, 25, 25, -0.5, -25, -25, -0.5, -25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vp0pd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8wjpa"]
+
+[node name="Main" type="Node3D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="BlackDot" type="ColorRect" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.705882)
+
+[node name="WhiteDot" type="ColorRect" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 1, 1, 0.705882)
+
+[node name="LightingChanger" type="Node" parent="." node_paths=PackedStringArray("environment", "sun")]
+script = ExtResource("1_4w7xk")
+military_time_hour = 9.0
+lighting = Array[Resource("res://Scripts/Lighting.gd")]([ExtResource("2_dmmva"), ExtResource("3_gc3k3"), ExtResource("4_kwcjo"), ExtResource("5_febgx"), ExtResource("6_xta1e"), ExtResource("7_v110k"), ExtResource("8_6vfgb"), ExtResource("9_kpmyw"), ExtResource("10_fh70k"), ExtResource("11_u4mso"), ExtResource("12_ny5ea"), ExtResource("13_xy352"), ExtResource("14_yifs8"), ExtResource("15_7rxca"), ExtResource("16_rnrpi"), ExtResource("17_0bkwn"), ExtResource("18_wse5x"), ExtResource("19_b7xd2"), ExtResource("20_txevg"), ExtResource("21_dunwp"), ExtResource("22_w4wh0"), ExtResource("23_dtqdv")])
+environment = NodePath("../WorldEnvironment")
+sun = NodePath("../Sun")
+
+[node name="TimeOfDaySystem" type="Node" parent="." node_paths=PackedStringArray("lighting_changer")]
+script = ExtResource("24_crcnr")
+time_pause = true
+lighting_changer = NodePath("../LightingChanger")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("28_f8a2h")
+camera_attributes = ExtResource("29_j6yrg")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 3.09086e-08, -3.09086e-08, 0, 0, 0)
+light_intensity_lux = 50000.0
+light_temperature = 3750.0
+shadow_enabled = true
+directional_shadow_split_1 = 0.03
+directional_shadow_split_2 = 0.09
+directional_shadow_split_3 = 0.2
+directional_shadow_max_distance = 1000.0
+
+[node name="FogVolume" type="FogVolume" parent="."]
+shape = 4
+material = ExtResource("27_1ipqp")
+
+[node name="Human-For-Scale" parent="." instance=ExtResource("26_111je")]
+enable_physics_gun = true
+enable_depth_of_field = true
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_wedtd")
+surface_material_override/0 = ExtResource("25_ob051")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_csmvq")
+
+[node name="Cube" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -2.5)
+mass = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube"]
+mesh = SubResource("BoxMesh_vp0pd")
+surface_material_override/0 = ExtResource("30_2mevd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube"]
+shape = SubResource("BoxShape3D_8wjpa")
+
+[node name="Cube2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -2.5)
+mass = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube2"]
+mesh = SubResource("BoxMesh_vp0pd")
+surface_material_override/0 = ExtResource("30_2mevd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube2"]
+shape = SubResource("BoxShape3D_8wjpa")
+
+[node name="Cube3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2.5)
+mass = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube3"]
+mesh = SubResource("BoxMesh_vp0pd")
+surface_material_override/0 = ExtResource("30_2mevd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube3"]
+shape = SubResource("BoxShape3D_8wjpa")
